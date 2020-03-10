@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.along.mapper.ApplicationMapper">
+
+
+
+    <select id="ApplicationList" resultType="Application">
+    select * from application
+  </select>
+
+    <select id="selectApplicationById" resultType="Application">
+    select * from application where applicationId = #{applicationId}
+</select>
+
+    <select id="selectApplicationByuserId" resultType="Application">
+    select * from application where userId = #{userId}
+</select>
+
+
+    <insert id="addApplication" parameterType="Application" >
+    insert into application (userId,hotelFees,travelFees,applicationId,destination,approvalStatus,approvalTime,note) values (#{userId},#{hotelFees},#{travelFees},#{applicationId},#{destination},#{approvalStatus},#{approvalTime},#{note})
+</insert>
+
+
+
+    <update id="updateApplication" parameterType="Application">
+    update application set userId=#{userId},hotelFees=#{hotelFees},travelFees=#{travelFees},destination=#{destination},approvalStatus=#{approvalStatus},approvalTime=#{approvalTime}, note=#{note} where applicationId = #{applicationId}
+</update>
+
+    <delete id="deleteApplication" parameterType="Integer">
+    delete from application where applicationId=#{applicationId}
+</delete>
+
+    <select id="returnIdByusernId" resultType="Integer">
+    select applicationId from application where userId = #{userId}
+</select>
+
+
+</mapper>

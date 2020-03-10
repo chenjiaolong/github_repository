@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+encoding//WebContent/goods/showgoods.jsp=UTF-8
+encoding//src/cn/sx/dao/impl/Userdaoimpl.java=UTF-8
+encoding//src/cn/sx/servlet/Userservlet.java=UTF-8
+encoding//src/cn/sx/util/JdbcUtils.java=UTF-8
