@@ -1,0 +1,2 @@
+# github_repository
+对应的本地的G盘的github_repository的本地仓库，将本地的仓库关联到github上
